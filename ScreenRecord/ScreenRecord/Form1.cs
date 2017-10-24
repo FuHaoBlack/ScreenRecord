@@ -72,7 +72,10 @@ namespace ScreenRecord
             Image result = ScreenModel.GetScreenBitmap((Screen)comboBox1.SelectedValue);
             if (isRecord)
             {
-                AccordModel.AddBmpInAvi((Image)result.Clone());
+                if (AccordRecord)
+                    AccordModel.AddBmpInAvi((Image)result.Clone());
+                if (AForgeRecord)
+                    AForgeModel.AddBmpInAvi((Image)result.Clone());
             }
             Image img = ScreenModel.GetPicThumbnail(result, 50, this.panel1.Height, this.panel1.Width);
             gs.DrawImage(img, panel1.Location);
@@ -107,6 +110,7 @@ namespace ScreenRecord
         private List<Bitmap> bmpls = new List<Bitmap>();
 
         private bool isRecord = false;
+        private bool AccordRecord = false;
         private void button4_Click(object sender, EventArgs e)
         {
             if (Directory.Exists(this.textBox1.Text))
@@ -117,6 +121,7 @@ namespace ScreenRecord
                 Screen screen = (Screen)comboBox1.SelectedValue;
                 AccordModel.WriteAvi(this.textBox1.Text + @"\" + DateTime.Now.Ticks + ".avi", screen.WorkingArea.Width, screen.WorkingArea.Height);
                 isRecord = true;
+                AccordRecord = true;
                 timer.Start();
             }
         }
@@ -140,12 +145,41 @@ namespace ScreenRecord
         private void button6_Click(object sender, EventArgs e)
         {
             isRecord = false;
+            AccordRecord = false;
             button5.Text = "暂停";
             this.textBox1.Enabled = true;
             this.button3.Enabled = true;
             timer.Stop();
             this.label1.Text = "00:00:00";
             AccordModel.OverAvi();
+        }
+
+        private bool AForgeRecord = false;
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (Directory.Exists(this.textBox1.Text))
+            {
+                this.textBox1.Enabled = false;
+                this.button3.Enabled = false;
+                bmpls.Clear();
+                Screen screen = (Screen)comboBox1.SelectedValue;
+                AForgeModel.WriteAvi(this.textBox1.Text + @"\" + DateTime.Now.Ticks + ".mp4", screen.WorkingArea.Width, screen.WorkingArea.Height, AForge.Video.FFMPEG.VideoCodec.MPEG4);
+                isRecord = true;
+                AForgeRecord = true;
+                timer.Start();
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            isRecord = false;
+            AForgeRecord = false;
+            button5.Text = "暂停";
+            this.textBox1.Enabled = true;
+            this.button3.Enabled = true;
+            timer.Stop();
+            this.label1.Text = "00:00:00";
+            AForgeModel.OverAvi();
         }
     }
 }

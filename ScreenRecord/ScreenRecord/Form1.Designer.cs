@@ -39,6 +39,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,7 +64,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(428, 91);
+            this.label1.Location = new System.Drawing.Point(842, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 12);
             this.label1.TabIndex = 2;
@@ -73,6 +76,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(213, 21);
             this.textBox1.TabIndex = 3;
+            this.textBox1.Text = "C:\\Users\\admin\\Desktop";
             // 
             // button1
             // 
@@ -110,7 +114,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(132, 23);
             this.button4.TabIndex = 6;
-            this.button4.Text = "录制视频";
+            this.button4.Text = "Accord录制视频";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -134,11 +138,43 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // Form2
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(428, 94);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(132, 23);
+            this.button7.TabIndex = 9;
+            this.button7.Text = "AForge录制视频";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(704, 94);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(132, 23);
+            this.button8.TabIndex = 10;
+            this.button8.Text = "结束录制";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(566, 94);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(132, 23);
+            this.button9.TabIndex = 11;
+            this.button9.Text = "暂停";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(999, 459);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -149,7 +185,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel1);
-            this.Name = "Form2";
+            this.Name = "Form1";
             this.Text = "Form";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -170,6 +206,10 @@
         private System.Windows.Forms.Button button6;
 
         #endregion
+
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
     }
 }
 

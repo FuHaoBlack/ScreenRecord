@@ -71,6 +71,10 @@
       <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="AForge.Video.FFMPEG, Version=2.2.5.0, Culture=neutral, PublicKeyToken=03563089b1be05dd, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Properties\AForge.Video.FFMPEG.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -95,6 +99,9 @@
     <Compile Include="Model\ScreenModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -104,6 +111,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Externals\ffmpeg\lib\avcodec.lib" />
+    <None Include="Externals\ffmpeg\lib\avdevice.lib" />
+    <None Include="Externals\ffmpeg\lib\avfilter.lib" />
+    <None Include="Externals\ffmpeg\lib\avformat.lib" />
+    <None Include="Externals\ffmpeg\lib\avutil.lib" />
+    <None Include="Externals\ffmpeg\lib\postproc.lib" />
+    <None Include="Externals\ffmpeg\lib\swresample.lib" />
+    <None Include="Externals\ffmpeg\lib\swscale.lib" />
+    <None Include="Externals\libfreenect\APACHE20" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -117,6 +133,118 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\avcodec-53.dll" />
+    <Content Include="bin\Debug\avdevice-53.dll" />
+    <Content Include="bin\Debug\avfilter-2.dll" />
+    <Content Include="bin\Debug\avformat-53.dll" />
+    <Content Include="bin\Debug\avutil-51.dll" />
+    <Content Include="bin\Debug\postproc-52.dll" />
+    <Content Include="bin\Debug\swresample-0.dll" />
+    <Content Include="bin\Debug\swscale-2.dll" />
+    <Content Include="Externals\ffmpeg\AForge ReadMe.txt" />
+    <Content Include="Externals\ffmpeg\bin\avcodec-53.dll" />
+    <Content Include="Externals\ffmpeg\bin\avdevice-53.dll" />
+    <Content Include="Externals\ffmpeg\bin\avfilter-2.dll" />
+    <Content Include="Externals\ffmpeg\bin\avformat-53.dll" />
+    <Content Include="Externals\ffmpeg\bin\avutil-51.dll" />
+    <Content Include="Externals\ffmpeg\bin\postproc-52.dll" />
+    <Content Include="Externals\ffmpeg\bin\swresample-0.dll" />
+    <Content Include="Externals\ffmpeg\bin\swscale-2.dll" />
+    <Content Include="Externals\ffmpeg\include\libavcodec\avcodec.h" />
+    <Content Include="Externals\ffmpeg\include\libavcodec\avfft.h" />
+    <Content Include="Externals\ffmpeg\include\libavcodec\dxva2.h" />
+    <Content Include="Externals\ffmpeg\include\libavcodec\opt.h" />
+    <Content Include="Externals\ffmpeg\include\libavcodec\vaapi.h" />
+    <Content Include="Externals\ffmpeg\include\libavcodec\vda.h" />
+    <Content Include="Externals\ffmpeg\include\libavcodec\vdpau.h" />
+    <Content Include="Externals\ffmpeg\include\libavcodec\version.h" />
+    <Content Include="Externals\ffmpeg\include\libavcodec\xvmc.h" />
+    <Content Include="Externals\ffmpeg\include\libavdevice\avdevice.h" />
+    <Content Include="Externals\ffmpeg\include\libavfilter\avcodec.h" />
+    <Content Include="Externals\ffmpeg\include\libavfilter\avfilter.h" />
+    <Content Include="Externals\ffmpeg\include\libavfilter\avfiltergraph.h" />
+    <Content Include="Externals\ffmpeg\include\libavfilter\buffersink.h" />
+    <Content Include="Externals\ffmpeg\include\libavfilter\version.h" />
+    <Content Include="Externals\ffmpeg\include\libavfilter\vsrc_buffer.h" />
+    <Content Include="Externals\ffmpeg\include\libavformat\avformat.h" />
+    <Content Include="Externals\ffmpeg\include\libavformat\avio.h" />
+    <Content Include="Externals\ffmpeg\include\libavformat\version.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\adler32.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\aes.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\attributes.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\audioconvert.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\avassert.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\avconfig.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\avstring.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\avutil.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\base64.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\bswap.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\common.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\cpu.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\crc.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\dict.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\error.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\eval.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\fifo.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\file.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\imgutils.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\intfloat_readwrite.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\intreadwrite.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\lfg.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\log.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\lzo.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\mathematics.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\md5.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\mem.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\opt.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\parseutils.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\pixdesc.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\pixfmt.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\random_seed.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\rational.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\samplefmt.h" />
+    <Content Include="Externals\ffmpeg\include\libavutil\sha.h" />
+    <Content Include="Externals\ffmpeg\include\libpostproc\postprocess.h" />
+    <Content Include="Externals\ffmpeg\include\libswresample\swresample.h" />
+    <Content Include="Externals\ffmpeg\include\libswscale\swscale.h" />
+    <Content Include="Externals\ffmpeg\licenses\bzip2.txt" />
+    <Content Include="Externals\ffmpeg\licenses\ffmpeg.txt" />
+    <Content Include="Externals\ffmpeg\licenses\freetype.txt" />
+    <Content Include="Externals\ffmpeg\licenses\frei0r.txt" />
+    <Content Include="Externals\ffmpeg\licenses\gsm.txt" />
+    <Content Include="Externals\ffmpeg\licenses\lame.txt" />
+    <Content Include="Externals\ffmpeg\licenses\libvpx.txt" />
+    <Content Include="Externals\ffmpeg\licenses\opencore-amr.txt" />
+    <Content Include="Externals\ffmpeg\licenses\openjpeg.txt" />
+    <Content Include="Externals\ffmpeg\licenses\rtmp.txt" />
+    <Content Include="Externals\ffmpeg\licenses\schroedinger.txt" />
+    <Content Include="Externals\ffmpeg\licenses\sdl.txt" />
+    <Content Include="Externals\ffmpeg\licenses\speex.txt" />
+    <Content Include="Externals\ffmpeg\licenses\theora.txt" />
+    <Content Include="Externals\ffmpeg\licenses\vo-aacenc.txt" />
+    <Content Include="Externals\ffmpeg\licenses\vo-amrwbenc.txt" />
+    <Content Include="Externals\ffmpeg\licenses\vorbis.txt" />
+    <Content Include="Externals\ffmpeg\licenses\x264.txt" />
+    <Content Include="Externals\ffmpeg\licenses\xavs.txt" />
+    <Content Include="Externals\ffmpeg\licenses\xvid.txt" />
+    <Content Include="Externals\ffmpeg\licenses\zlib.txt" />
+    <Content Include="Externals\ffmpeg\README.txt" />
+    <Content Include="Externals\GhostAPI\AForge ReadMe.txt" />
+    <Content Include="Externals\GhostAPI\GhostAPI.dll" />
+    <Content Include="Externals\GhostAPI\PbkComm32.dll" />
+    <Content Include="Externals\GhostAPI\PbkUsbPort.dll" />
+    <Content Include="Externals\GhostAPI\relnotes.txt" />
+    <Content Include="Externals\libfreenect\AForge ReadMe.txt" />
+    <Content Include="Externals\libfreenect\freenect.dll" />
+    <Content Include="Externals\msinttypes\AForge ReadMe.txt" />
+    <Content Include="Externals\msinttypes\changelog.txt" />
+    <Content Include="Externals\msinttypes\inttypes.h" />
+    <Content Include="Externals\msinttypes\stdint.h" />
+    <Content Include="Externals\TeRK\AForge ReadMe.txt" />
+    <Content Include="Externals\TeRK\TeRK.dll" />
+    <Content Include="Properties\AForge.Video.FFMPEG.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Accord.3.8.0\build\Accord.targets" Condition="Exists('..\packages\Accord.3.8.0\build\Accord.targets')" />
