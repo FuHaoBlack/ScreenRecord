@@ -30,6 +30,8 @@ namespace ScreenRecord
             comboBox1.DisplayMember = "Key";
             comboBox1.ValueMember = "Value";
 
+            this.textBox1.Text= this.textBox1.Text = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+
             this.timer = new Timer();
             this.timer.Interval = 1000;
             this.timer.Tick += Timer_Tick;

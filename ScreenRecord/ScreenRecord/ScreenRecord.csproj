@@ -119,7 +119,6 @@
     <None Include="Externals\ffmpeg\lib\postproc.lib" />
     <None Include="Externals\ffmpeg\lib\swresample.lib" />
     <None Include="Externals\ffmpeg\lib\swscale.lib" />
-    <None Include="Externals\libfreenect\APACHE20" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -231,19 +230,6 @@
     <Content Include="Externals\ffmpeg\licenses\xvid.txt" />
     <Content Include="Externals\ffmpeg\licenses\zlib.txt" />
     <Content Include="Externals\ffmpeg\README.txt" />
-    <Content Include="Externals\GhostAPI\AForge ReadMe.txt" />
-    <Content Include="Externals\GhostAPI\GhostAPI.dll" />
-    <Content Include="Externals\GhostAPI\PbkComm32.dll" />
-    <Content Include="Externals\GhostAPI\PbkUsbPort.dll" />
-    <Content Include="Externals\GhostAPI\relnotes.txt" />
-    <Content Include="Externals\libfreenect\AForge ReadMe.txt" />
-    <Content Include="Externals\libfreenect\freenect.dll" />
-    <Content Include="Externals\msinttypes\AForge ReadMe.txt" />
-    <Content Include="Externals\msinttypes\changelog.txt" />
-    <Content Include="Externals\msinttypes\inttypes.h" />
-    <Content Include="Externals\msinttypes\stdint.h" />
-    <Content Include="Externals\TeRK\AForge ReadMe.txt" />
-    <Content Include="Externals\TeRK\TeRK.dll" />
     <Content Include="Properties\AForge.Video.FFMPEG.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
